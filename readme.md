@@ -16,3 +16,19 @@
     3.  pengujian:
         - jalankan server : npm run dev
         - pada browser http://localhost:5000
+
+## Env file setup
+
+    Todo :
+    1.  .env
+        - pada directori root buat file .env
+        - isi dengan :
+            NODE_ENV=development
+            PORT=8000
+    2.  server.js
+        - import dan pasang dotenv
+    3.  .gitignore
+        - daftarkan file .env agar tidak terpush ke github
+    4.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
