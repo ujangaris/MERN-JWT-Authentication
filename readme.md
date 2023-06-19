@@ -32,3 +32,19 @@
     4.  pengujian:
         - jalankan server : npm run dev
         - pada browser http://localhost:5000
+
+## User Routes & Controller Setup
+
+    Todo :
+    1.  backend/conrollers/userController.js
+        - setup userController
+    2.  backend/routes/userRoutes.js
+        - import dan pasang express
+        - import dan pasang userController
+        - buat endpoint auth
+    3.  server.js
+        - import dan pasang userRoutes
+        - buat endpoint default untuk epi
+    4.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
