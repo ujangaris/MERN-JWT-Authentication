@@ -120,3 +120,15 @@
         - pada console.log akan menampilkan:
             - Server stared on port 5000
             - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+
+## User Model
+
+    Todo :
+    1.  backend/models/userModel.js
+        - buat schema database untuk user
+    2.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
