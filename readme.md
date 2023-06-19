@@ -102,3 +102,21 @@
         - Logout User :POST {{baseURL}}/users/logout
         - Get User Profile  :GET {{baseURL}}/users/profile
         - Update User Profile  :PUT {{baseURL}}/users/profile
+
+## MongoDB Database Setup
+
+    Todo :
+    1.  .env
+        - MONGO_URI=mongodb+srv://ujangaja:<password>@mernauth.junhttb.mongodb.net/mernauth?retryWrites=true&w=majority
+        - ganti password dengan password yanga terdaftar pada mongodb atlas
+    2.  backend/config/db.js
+        - setup connection database mongodb
+        - MONGO_URI adalah connection yang kita pasang pada file.env
+    3.  server.js
+        - import dan pasang connectDB alias dari db.js
+    4.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
