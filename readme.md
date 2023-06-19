@@ -84,3 +84,21 @@
     2.  pengujian:
         - jalankan server : npm run dev
         - pada browser http://localhost:5000
+
+## Connect To User Routes
+
+    Todo :
+    1.  backend/routes/userRoutes.js
+        - import dan pasang registerUser sebagai entpoint
+        - import dan pasang logoutUser sebagai entpoint
+        - import dan pasang  getUserProfile sebagai entpoint
+        - import dan pasang  updateUserProfile sebagai entpoint
+    2.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
+    3.  pada postman
+        - Login User :POST {{baseURL}}/users/auth
+        - Register User :POST {{baseURL}}/users
+        - Logout User :POST {{baseURL}}/users/logout
+        - Get User Profile  :GET {{baseURL}}/users/profile
+        - Update User Profile  :PUT {{baseURL}}/users/profile
