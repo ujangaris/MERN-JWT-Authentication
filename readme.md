@@ -72,3 +72,15 @@
           seperti yang kita buat pada userController.js
             "message": "Something went wrong",
             "stack": "Error: Something went wrong
+
+## User Controller Functions
+
+    Todo :
+    1.  backend/controller/userController.js
+        - buat dan export registerUser
+        - buat dan export logoutUser
+        - buat dan export getUserProfile
+        - buat dan export updateUserProfile
+    2.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
