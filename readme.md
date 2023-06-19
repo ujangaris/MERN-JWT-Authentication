@@ -48,3 +48,27 @@
     4.  pengujian:
         - jalankan server : npm run dev
         - pada browser http://localhost:5000
+
+## Async handlers & Custom error middleware
+
+    Todo :
+    1.  install asycn handler
+        - npm install express-async-handler
+    2.  backend/middleware/errorMiddleware.js
+        - buat function not found
+        - buat function error handler
+    3.  server.js
+        - import dan pasang notFound & errorHandler
+    4.  userController.js
+        - import dan asynHandler
+        - pasang status code dan error
+    5.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
+        - pada postman:
+            http://localhost:5000/api/users/auth
+            atau {{ baseUrl/api/users/auth }}
+        - pada postman akan ada keterangan error
+          seperti yang kita buat pada userController.js
+            "message": "Something went wrong",
+            "stack": "Error: Something went wrong
