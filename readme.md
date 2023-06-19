@@ -132,3 +132,41 @@
         - pada console.log akan menampilkan:
             - Server stared on port 5000
             - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+
+## Register User Endpoint
+
+    Todo :
+    1.  serve.js
+        - add express.json
+        - add express.urlencoded
+    2.  backend/controller/userController.js
+        - Destrukturisasi req.body untuk mendapatkan nilai name, email,
+          dan password dari permintaan POST yang dikirim oleh pengguna.
+        - mencari user exists berdasarkan email
+        - jika user dengan email sudah terdaftar akan ada pesan User already exists
+        - jika user dengan email tidak ditemukan maka buat data baru
+        - jika pembuatan user baru berhasil kirim response  (200 ok) dengan isi id, namedan email
+        - jika gagal kirim response badrequest : Invalid user data
+    3.  backend/models/userModel.js
+        - import dan pasang bcryptjs
+        - middleware userSchema sebelum menyimpan data ke database
+        - cek apakah password telah dimodifikasi
+    4.  pengujian:
+        - jalankan server : npm run dev
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+    5.  pengujian pada postman
+        - Register User : POST {{baseURL}}/users
+        - body -> x-www-form-url-encoded
+            name: john doe
+            email: john@gmail.com
+            password:<password>
+        - send data , kemudian akan ada response :
+            {
+                "_id": "649032584791100eb448eb2f",
+                "name": "john doe",
+                "email": "john@gmail.com"
+            }
+        - cek juga pada mongodb compas/atlas apakah ada data yang berhasil terbuat
