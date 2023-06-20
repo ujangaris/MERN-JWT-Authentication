@@ -14,7 +14,7 @@
         - setup script untuk menjalankan server
         - pasang nodemon
     3.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
 
 ## Env file setup
@@ -30,7 +30,7 @@
     3.  .gitignore
         - daftarkan file .env agar tidak terpush ke github
     4.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
 
 ## User Routes & Controller Setup
@@ -46,7 +46,7 @@
         - import dan pasang userRoutes
         - buat endpoint default untuk epi
     4.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
 
 ## Async handlers & Custom error middleware
@@ -63,7 +63,7 @@
         - import dan asynHandler
         - pasang status code dan error
     5.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
         - pada postman:
             http://localhost:5000/api/users/auth
@@ -82,7 +82,7 @@
         - buat dan export getUserProfile
         - buat dan export updateUserProfile
     2.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
 
 ## Connect To User Routes
@@ -94,7 +94,7 @@
         - import dan pasang  getUserProfile sebagai entpoint
         - import dan pasang  updateUserProfile sebagai entpoint
     2.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
     3.  pada postman
         - Login User :POST {{baseURL}}/users/auth
@@ -115,7 +115,7 @@
     3.  server.js
         - import dan pasang connectDB alias dari db.js
     4.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
         - pada console.log akan menampilkan:
             - Server stared on port 5000
@@ -127,7 +127,7 @@
     1.  backend/models/userModel.js
         - buat schema database untuk user
     2.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
         - pada console.log akan menampilkan:
             - Server stared on port 5000
@@ -152,7 +152,7 @@
         - middleware userSchema sebelum menyimpan data ke database
         - cek apakah password telah dimodifikasi
     4.  pengujian:
-        - jalankan server : npm run dev
+        - jalankan server : npm run server
         - pada browser http://localhost:5000
         - pada console.log akan menampilkan:
             - Server stared on port 5000
@@ -169,4 +169,32 @@
                 "name": "john doe",
                 "email": "john@gmail.com"
             }
+        - cek juga pada mongodb compas/atlas apakah ada data yang berhasil terbuat
+
+## Generate JWT & Save Cookie
+
+    Todo :
+    1.  backend/utils/generateToken.js
+        - setup generateToken
+    2.  backend/controller/userController.js
+        - import dan pasang generateToken
+    4.  pengujian:
+        - jalankan server : npm run server
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+    5.  pengujian pada postman
+        - Register User : POST {{baseURL}}/users
+        - body -> x-www-form-url-encoded
+            name: john doe
+            email: john@gmail.com
+            password:<password>
+        - send data , kemudian akan ada response :
+            {
+                "_id": "649032584791100eb448eb2f",
+                "name": "john doe",
+                "email": "john@gmail.com"
+            }
+        - akan ada cookie yang token tergenrate
         - cek juga pada mongodb compas/atlas apakah ada data yang berhasil terbuat
