@@ -198,3 +198,34 @@
             }
         - akan ada cookie yang token tergenrate
         - cek juga pada mongodb compas/atlas apakah ada data yang berhasil terbuat
+
+## Auth User Endpoint
+
+    Todo :
+    1.  backend/models/userModel.js
+        - bandingkan password yang di input pengguna dan password pada database
+    2.  backend/controller/userController.js
+        - pada auth user login tambahkan :
+         - if statement untuk mengecek apakah password yang diberikan cocok
+           dengan password yang telah di-hash sebelumnya
+         - buat token autentikasi yang akan digunakan untuk mengakses diotorisasi.
+         - kirim response
+    3.  pengujian:
+        - jalankan server : npm run server
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+    4.  pengujian pada postman
+        - Login User : POST {{baseURL}}/users/auth
+        - body -> x-www-form-url-encoded
+            email: john@gmail.com
+            password:<password>
+        - send data , kemudian akan ada response :
+            {
+                "_id": "649032584791100eb448eb2f",
+                "name": "john doe",
+                "email": "john@gmail.com"
+            }
+        - akan ada cookie yang token tergenrate
+        - noted: login dengan data yang ada di database.
