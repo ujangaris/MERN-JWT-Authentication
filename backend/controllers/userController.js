@@ -66,7 +66,12 @@ const registerUser = asyncHandler(async (req, res) => {
 // route  POST /api/users/logout
 // @access public
 const logoutUser = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: 'Logout User' })
+  //hapus cookie : set cookie dengan nilai kosong
+  res.cookie('jwt', '', {
+    httpOnly: true,
+    expires: new Date(0),
+  })
+  res.status(200).json({ message: 'User logged out' })
 })
 // @desc  GET user profile
 // route  GET /api/users/profile

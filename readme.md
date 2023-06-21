@@ -229,3 +229,24 @@
             }
         - akan ada cookie yang token tergenrate
         - noted: login dengan data yang ada di database.
+
+## Logout & Destroy Cookie
+
+    Todo :
+    1.  backend/controller/userController.js
+        - hapus cookie : set cookie dengan nilai kosong
+    2.  pengujian:
+        - jalankan server : npm run server
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+    3.  pengujian pada postman
+        - Logout User : POST {{baseURL}}/users/logout
+
+        - send data , kemudian akan ada response :
+            {
+                "message": "User logged out"
+            }
+        - cek juga pada pada button bagian cookies
+        - nilai cookie sudah terhapus
