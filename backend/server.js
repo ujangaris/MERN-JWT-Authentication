@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cookieParser from 'cookie-parser'
 import userRoutes from './routes/userRoutes.js'
 import { notFound, errorHandler } from './middleware/errorMiddlewaare.js'
 import connectDB from './config/db.js'
@@ -11,6 +12,7 @@ const port = process.env.PORT || 5000
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser())
 
 // endpoint default untuk epi
 app.use('/api/users', userRoutes)

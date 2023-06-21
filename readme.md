@@ -250,3 +250,62 @@
             }
         - cek juga pada pada button bagian cookies
         - nilai cookie sudah terhapus
+
+## Auth Protect Middleware
+
+    Todo :
+    1.  server.js
+        - import dan pasang cookie-parser
+    2.  backend/middleware/authMiddleware.js
+        - buat function protect
+        - tampung nilai jwt kedalam  token
+        - ceck token ada  atau tidak
+        - jika token ada akan di eksekusi ke baris ini
+        - jika token tidak ada buat response 401 dan pesan token tidak valid
+        - jika token tidak ada buat response 401 dan pesan token tidak ada
+    3.  backend/routes/userRoutes.js
+        - import dan pasang  authMiddleware dengan nama protect
+        - pasang pada getUserProfile & updateUserProfile
+    4.  pengujian:
+        - jalankan server : npm run server
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+    5.  pengujian pada postman
+        - jika belum login:
+            - Get User Profile : POST {{baseURL}}/users/profile
+
+            - send data , kemudian akan ada response :
+                {
+                    "message": "Not authorized, no token",
+                }
+            - hal ini terjadi karna user belom login=tidak ada token
+        - jika sudah login:
+            - lakukan Login User : POST {{baseURL}}/users/auth
+
+            - Get User Profile : POST {{baseURL}}/users/profile
+
+            - send data , kemudian akan ada response :
+                {
+                    "message": "Get User Profile",
+                }
+            - hal ini terjadi karna token=cookie terbaca
+            - lakukan juga pada update user profile
+
+    6.  backend/controller/userController.js
+        - cetak data user yang login
+    7.  pengujian pada postman
+        - jika sudah login:
+            - lakukan Login User : POST {{baseURL}}/users/auth
+
+            - Get User Profile : POST {{baseURL}}/users/profile
+
+            - send data , kemudian akan ada response :
+                {
+                    "_id": "6491653d4356f0120a79bd45",
+                    "name": "john doe",
+                    "email": "john@gmail.com"
+                }
+            - hal ini terjadi karna token=cookie terbaca
+            - lakukan juga pada update user profile
