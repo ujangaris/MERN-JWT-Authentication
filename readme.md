@@ -309,3 +309,39 @@
                 }
             - hal ini terjadi karna token=cookie terbaca
             - lakukan juga pada update user profile
+
+## Update User Profile Endpoint
+
+    Todo :
+    1.  backend/controller/userController.js
+        - mencari user berdasarkan id
+        - memeriksa apakah userditemukan berdasarkan id yang diberikan
+        - jika ditemukan update name || jika name tidak diberi nilai baru , maka name  tidak berubah
+        - jika ditemukan update email || jika email tidak diberi nilai baru , maka email  tidak berubah
+        - memeriksa ada kah permintaan perubahan nilai untuk password
+        - menyimpan perubahan kedatabse
+        - mengirim kembali data yang telah diperbaharui kedalam response json
+    2.  pengujian:
+        - jalankan server : npm run server
+        - pada browser http://localhost:5000
+        - pada console.log akan menampilkan:
+            - Server stared on port 5000
+            - MongoDB Connected to ac-daqo3xj-shard-00-00.junhttb.mongodb.net
+    3.  pengujian pada postman
+
+        - jika sudah login:
+            - lakukan Login User : POST {{baseURL}}/users/auth
+
+            - Update User Profile : PUT {{baseURL}}/users/profile
+
+            - body -> x-www-form-url-encoded
+            email: masukan email baru
+            name: masukan name baru
+            password: masukan password baru
+            - send data , kemudian akan ada response :
+            {
+                "_id": "649032584791100eb448eb2f",
+                "name": nama yang baru saja di update,
+                "email": email yang baru saja diupdate
+            }
+            - response akan menampilkan object dengan data yang baru saja di update
