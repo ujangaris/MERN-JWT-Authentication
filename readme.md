@@ -345,3 +345,14 @@
                 "email": email yang baru saja diupdate
             }
             - response akan menampilkan object dengan data yang baru saja di update
+
+## Starting The Frontend
+
+    Todo :
+    1.  install react vite
+        - npm create vite@latest frontend
+        - cd frontend
+        - /frontend npm install
+    2.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+
