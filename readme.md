@@ -356,3 +356,26 @@
     2.  pengujian pada browser:
         - jalankan react vite: npm run dev
 
+## Concurrently Setup & vite.config setup
+
+    Todo :
+    1.  install concurrently
+        - pada root directory:  npm i -D concurrently
+    2.  vite.config.js
+        - setup server configuration agar port bejalan di 3000
+        - setup server backend api yang berjalan di port 5000
+    3.  package.json
+        - setup server configuration agar dapat berjalan sekaligus dengan concurrently
+            "server": "nodemon backend/server.js",
+            "client": "npm run dev --prefix frontend",
+             "dev": "concurrently \"npm run server\" \"npm run client\""
+    4.  hapus file App.css
+    5.  index.html
+        - namai title dengan MERN Auth
+    6.  App.jsx
+        - setup MERN Auth
+    7.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
