@@ -407,3 +407,20 @@
         - server backend dan frontend akan berjalan sekaligus
         - untuk backend : buka post man dan coba lakukan request
         - untuk frontend: http://localhost:3000
+
+## HomeScreen & Hero
+
+    Todo :
+    1.  components/Hero.jsx
+        - setup Hero component
+        - docs: https://react-bootstrap-v4.netlify.app/components/navbar/
+    2.  screens/HomeScreen.jsx
+        - rafc
+        - import dan pasang Hero
+    3.  App.jsx
+        - import dan pasang HomeScreen
+    4.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
