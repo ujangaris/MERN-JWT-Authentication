@@ -424,3 +424,26 @@
         - server backend dan frontend akan berjalan sekaligus
         - untuk backend : buka post man dan coba lakukan request
         - untuk frontend: http://localhost:3000
+
+## React Router Setup
+
+    Todo :
+    1.  install react router dom & react router bootstrap
+        - /frontend : npm install react-router-dom react-router-bootstrap
+    2.  main.jsx
+        - import dan pasang :
+            createBrowserRouter,createRoutesFromElements,Route,RouterProvider
+    3.  App.jsx
+        - import dan pasang Outlet
+        - import danb pasang Container
+    4.  components/Header.jsx
+        - import dan pasang LinkContainer
+        - linkContainer digunakan agar halaman tidak refresh
+    5.  components/Hero.jsx
+        - import dan pasang LinkContainer
+        - linkContainer digunakan agar halaman tidak refresh
+    6.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
