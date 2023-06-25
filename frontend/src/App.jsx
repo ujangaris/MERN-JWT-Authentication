@@ -1,7 +1,13 @@
 import React from 'react'
+import { Header } from './components/Header'
 
 const App = () => {
-  return <div>MERN Auth</div>
+  return (
+    <div>
+      <Header />
+      <h1>MERN Auth</h1>
+    </div>
+  )
 }
 
 export default App

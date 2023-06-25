@@ -392,3 +392,18 @@
         - server backend dan frontend akan berjalan sekaligus
         - untuk backend : buka post man dan coba lakukan request
         - untuk frontend: http://localhost:3000
+
+## Header Component
+
+    Todo :
+    1.  components/Header.jsx
+        - setup header component
+        - docs: https://react-bootstrap-v4.netlify.app/components/navbar/
+        - import dan pasang react-icons/fa
+    2.  App.jsx
+        - import dan pasang Header
+    3.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
