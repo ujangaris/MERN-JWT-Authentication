@@ -447,3 +447,22 @@
         - server backend dan frontend akan berjalan sekaligus
         - untuk backend : buka post man dan coba lakukan request
         - untuk frontend: http://localhost:3000
+
+## Login & Register Form UI
+
+    Todo :
+    1.  components/FormContainer.jsx
+        - setup FormContainer, pasang props children
+    2.  screens/LoginScreen.jsx
+        - import dan pasang FormContainer
+        - stup form login
+    3.  screens/RegisterScreen.jsx
+        - import dan pasang FormContainer
+        - copy paste code dari LoginScreen, kemudian modifikasi
+    4.  main.jsx
+        - import dan pasang LoginScreen & RegisterScreen
+    5.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
