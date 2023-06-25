@@ -466,3 +466,19 @@
         - server backend dan frontend akan berjalan sekaligus
         - untuk backend : buka post man dan coba lakukan request
         - untuk frontend: http://localhost:3000
+
+## Redux Toolkit Setup
+
+    Todo :
+    1.  install redux toolkit
+        - npm install @reduxjs/toolkit react-redux
+    2.  src/store.js
+        - setup store
+    3.  main.jsx
+        - import dan pasang store
+        - import dan pasang Provider
+    4.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
