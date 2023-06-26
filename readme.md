@@ -500,3 +500,21 @@
                 userInfo:null
         - jika tampil seperti diatas maka setup yang kita lakukan untuk
           reducer dan action dalam redux berhasil
+
+## API Slices
+
+    Todo :
+    1.  frontend/src/slices/apiSlice.js
+        - setup apiSlice
+    2.  src/store.js
+        - import dan pasang apiSlice
+    3.  frontend/src/slices/usersApiSlice.js
+        - setup usersApiSlice
+    4.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
+        - klik nanan pada browser-> inspect-> redux
+            akan ada object api : {}
+        - jika tampil seperti diatas maka setup yang kita lakukan berhasil
