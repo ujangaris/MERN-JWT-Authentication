@@ -482,3 +482,21 @@
         - server backend dan frontend akan berjalan sekaligus
         - untuk backend : buka post man dan coba lakukan request
         - untuk frontend: http://localhost:3000
+
+## Auth Slice
+
+    Todo :
+    1.  frontend/src/slices/authSlice.js
+        - setup authSlice
+    2.  src/store.js
+        - import dan pasang authSlice dengan nama authReducer
+    3.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk backend : buka post man dan coba lakukan request
+        - untuk frontend: http://localhost:3000
+        - klik nanan pada browser-> inspect-> redux
+            auth:{} 1 key
+                userInfo:null
+        - jika tampil seperti diatas maka setup yang kita lakukan untuk
+          reducer dan action dalam redux berhasil
