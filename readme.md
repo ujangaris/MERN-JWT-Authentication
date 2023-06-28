@@ -548,7 +548,7 @@
 
     Todo :
     1.  install react toastify
-        - npm install react-toastify
+        - /frontend:  npm install react-toastify
         - docs : https://fkhadra.github.io/react-toastify/installation/
     2.  App.jsx
         - import dan pasang ToastContainer
@@ -564,3 +564,19 @@
           dalam bentuk toast
         - sekarang coba lakukan login dengan user terdaftar,
           akan diarahkan kehalaman home, dan akan ada toast Login berhsil
+
+## Auth Header Links
+
+    Todo :
+    1.  components/Header.jsx
+        - tampilkan nilai userInfo dengan hook useSelector
+        - buat dropdown dengan logic menggunakan userInfo sebagai kondisinya
+    2.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/login
+        - sekarang coba lakukan login dengan user terdaftar,
+          akan diarahkan kehalaman home, dan akan ada toast Login berhsil
+        - pada alaman home bagian header tidak lagi ada menu login dan register
+          akan tetapi digantikan oleh username yang sedang login dan ada dropdown
+          yang berisikan profile dan logout
