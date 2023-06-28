@@ -1,14 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FormContainer } from './../components/FormContainer'
 import { Button, Col, Form, FormGroup, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useLoginMutation } from '../slices/usersApiSlice'
+import { setCredentials } from '../slices/authSlice'
+import { useDispatch, useSelector } from 'react-redux'
+
 export const LoginScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  // deklar navigate
+  const navigate = useNavigate()
+
+  // deklar dispatch
+  const dispatch = useDispatch()
+  // custom hook login dengan useLoginMuttation
+  const [login, { isLoading }] = useLoginMutation()
+  //pasang useSelector
+  const { userInfo } = useSelector((state) => state.auth)
+
+  // pasang useEffect
+  useEffect(() => {
+    if (userInfo) {
+      navigate('/')
+    }
+  }, [navigate, userInfo])
 
   const submitHandleer = async (e) => {
     e.preventDefault()
-    console.log('submit')
+    // console.log('submit')
+    // 
+    try {
+      const res = await login({ email, password }).unwrap()
+      dispatch(setCredentials({ ...res }))
+      navigate('/')
+    } catch (err) {
+      console.error(err?.data?.message || err.error)
+    }
   }
   return (
     <FormContainer>

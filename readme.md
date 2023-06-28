@@ -518,3 +518,28 @@
         - klik nanan pada browser-> inspect-> redux
             akan ada object api : {}
         - jika tampil seperti diatas maka setup yang kita lakukan berhasil
+
+## Login Functionality
+
+    Todo :
+    1.  frontend/src/screens/LoginScreen.js
+        - import dan pasang useNavigate
+        - import dan pasang useDispatch
+        - import dan pasang useSelector
+        - import useLoginMuttation
+        - custom hook login dengan useLoginMuttation
+        - import dan pasang useEffect
+    2.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/login
+        - login dengan user tidak terdafatar terlebih dahulu,
+          akan ada pesan error : Invalid email or password
+          seperti yang kita buat pada backend userController
+        - sekarang coba lakukan login dengan user terdaftar,
+          akan diarahkan kehalaman home, ini menndakan user berhasil login
+        - klik nanan pada browser-> inspect-> redux
+            akan ada object api : {} -> userInfo{_id:"649be39e833c7980245ff94a"
+                                                name:"john doe"
+                                                email:"john@gmail.com"}
+        - jika tampil seperti diatas maka setup yang kita lakukan berhasil
