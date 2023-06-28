@@ -580,3 +580,23 @@
         - pada alaman home bagian header tidak lagi ada menu login dan register
           akan tetapi digantikan oleh username yang sedang login dan ada dropdown
           yang berisikan profile dan logout
+
+## Logout Functionality
+
+    Todo :
+    1.  slices/usersApiSlice.js
+        - buat endpoint logout
+    2.  components/Header.jsx
+        - deklar useDispatch
+        - deklar useNavigate
+        - buat function logoutHandler
+        - lakukan pemanggilan ke endpoint logout
+        - kirim aksi logout ke authSlice, dalam hal ini untuk menghapus informasi authentication dari state
+        - pasang toas untuk logout
+    3.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/
+        - sekarang coba lakukan logout
+        - jika berhasil akan ada toast anda berhasil logout
+        - menu login dan register akan tampil
