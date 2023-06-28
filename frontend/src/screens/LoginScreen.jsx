@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../slices/usersApiSlice'
 import { setCredentials } from '../slices/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState('')
@@ -29,13 +30,16 @@ export const LoginScreen = () => {
   const submitHandleer = async (e) => {
     e.preventDefault()
     // console.log('submit')
-    // 
+    //
     try {
       const res = await login({ email, password }).unwrap()
       dispatch(setCredentials({ ...res }))
       navigate('/')
+      // pasang toastify
+      toast.success('Berhasil login')
     } catch (err) {
-      console.error(err?.data?.message || err.error)
+      // pasang toastify
+      toast.error(err?.data?.message || err.error)
     }
   }
   return (

@@ -543,3 +543,24 @@
                                                 name:"john doe"
                                                 email:"john@gmail.com"}
         - jika tampil seperti diatas maka setup yang kita lakukan berhasil
+
+## React Toastify Setup
+
+    Todo :
+    1.  install react toastify
+        - npm install react-toastify
+        - docs : https://fkhadra.github.io/react-toastify/installation/
+    2.  App.jsx
+        - import dan pasang ToastContainer
+        - import 'react-toastify/dist/ReactToastify.css'
+    3.  frontend/src/screens/LoginScreen.js
+        - import dan pasang toastify
+    4.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/login
+        - login dengan user tidak terdafatar terlebih dahulu,
+          akan ada pesan error : Invalid email or password
+          dalam bentuk toast
+        - sekarang coba lakukan login dengan user terdaftar,
+          akan diarahkan kehalaman home, dan akan ada toast Login berhsil
