@@ -600,3 +600,17 @@
         - sekarang coba lakukan logout
         - jika berhasil akan ada toast anda berhasil logout
         - menu login dan register akan tampil
+
+## Loader Component
+
+    Todo :
+    1.  src/components/Loader.jsx
+        - setup loader with react bootstrap
+    2.  src/screens/LoginScreen.jsx
+        - import dan pasang Loader Component
+    3.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/
+        - sekarang pada halaman login coba klik button login
+        - jika berhasil akan ada spiner animation

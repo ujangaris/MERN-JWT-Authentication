@@ -6,6 +6,7 @@ import { useLoginMutation } from '../slices/usersApiSlice'
 import { setCredentials } from '../slices/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
+import { Loader } from '../components/Loader'
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState('')
@@ -64,6 +65,7 @@ export const LoginScreen = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </FormGroup>
+        {isLoading && <Loader />}
         <Button type='submit' className='mt-3' variant='primary'>
           Sign In
         </Button>
