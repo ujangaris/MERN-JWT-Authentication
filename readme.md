@@ -614,3 +614,26 @@
         - untuk frontend: http://localhost:3000/
         - sekarang pada halaman login coba klik button login
         - jika berhasil akan ada spiner animation
+
+## Register Functionality
+
+    Todo :
+    1.  src/slices/userApiSlice.jsx
+        - setup register(duplicate dri login kemudian modifikasi)
+    2.  src/screens/RegisterScreen.jsx
+        - import dan pasang useNavigate
+        - import dan pasang useDispatch
+        - import dan pasang useSelector
+        - import useRegisterMuttation
+        - custom hook register dengan useRegisterMuttation
+        - import dan pasang useEffect
+        - import dan pasang Loader Component
+        - import Loader Component
+    3.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/
+        - klik button register, kemudian cob but data baru
+        - jika berhasil akan ada spiner animation, kemudian akan ada
+          toast success register, dan diarahkan kehalaman home
+        - liat juga pada database mongodb, akan ada satu data bertambah tiap kali register berhasil
