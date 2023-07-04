@@ -637,3 +637,21 @@
         - jika berhasil akan ada spiner animation, kemudian akan ada
           toast success register, dan diarahkan kehalaman home
         - liat juga pada database mongodb, akan ada satu data bertambah tiap kali register berhasil
+
+## Start Profile & PrivateRoute Component
+
+    Todo :
+    1.  src/screens/ProfileScreen.jsx
+        - rafc
+    2.  src/components/PrivateRoute.jsx
+        - setup private route
+    3.  main.jsx
+        - import dan pasang ProfileScreen
+        - import dan pasang PrivateRoute
+          bungkus ProfileScreen kedalam PrivateRoute
+    4.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend: http://localhost:3000/profile
+        - jika belom login akan diarahkan ke halaman login
+        - coba lakukan login dan buka kemabali halaman profile
