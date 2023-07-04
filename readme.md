@@ -669,3 +669,25 @@
             - setelah login , klik menu profile
             - atau http://localhost:3000/profile
         - akan tampil form update profile
+
+## Update Profile Functionality
+
+    Todo :
+    1.  src/slices/usersApiSlice.js
+        - setup updateUser
+    2.  src/screens/ProfileScreen.jsx
+        - custom hook login dengan useUpdateUserMutation
+        - import dan pasang Loader
+        - pasang trycatch
+        - buat function updateProfile
+        - import dan pasang toast
+    3.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend:
+            - setelah login , klik menu profile
+            - atau http://localhost:3000/profile
+        - akan tampil form update profile
+        - coba lakukan update pda form profile
+        - jika setup yang kita lakukan berhasil, akan ada toast success dan
+          data perubahan akan tersimpan di databse

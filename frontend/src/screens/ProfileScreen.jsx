@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import { setCredentials } from '../slices/authSlice'
+import { useUpdateUserMutation } from '../slices/usersApiSlice'
+import { Loader } from './../components/Loader'
 
 export const ProfileScreen = () => {
   const [name, setName] = useState('')
@@ -19,6 +21,8 @@ export const ProfileScreen = () => {
 
   //pasang useSelector
   const { userInfo } = useSelector((state) => state.auth)
+  // custom hook login dengan useUpdateUserMutation
+  const [updateProfile, { isLoading }] = useUpdateUserMutation()
 
   // pasang useEffect
   useEffect(() => {
@@ -32,7 +36,19 @@ export const ProfileScreen = () => {
     if (password !== confirmPassword) {
       toast.error('Passwords do not match')
     } else {
-      console.log('submit')
+      try {
+        // console.log('submit')
+        const res = await updateProfile({
+          _id: userInfo._id,
+          name,
+          email,
+          password,
+        }).unwrap()
+        dispatch(setCredentials({ ...res }))
+        toast.success('Profile updated successfully')
+      } catch (err) {
+        toast.error(err?.data.message || err.error)
+      }
     }
   }
   return (
@@ -75,6 +91,7 @@ export const ProfileScreen = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
         </FormGroup>
+        {isLoading && <Loader />}
         <Button type='submit' className='mt-3' variant='primary'>
           Update
         </Button>
