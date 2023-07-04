@@ -655,3 +655,17 @@
         - untuk frontend: http://localhost:3000/profile
         - jika belom login akan diarahkan ke halaman login
         - coba lakukan login dan buka kemabali halaman profile
+
+## ProfileScreen Component
+
+    Todo :
+    1.  src/screens/ProfileScreen.jsx
+        - copy dan paste code dari register
+          kemudian modifikasi menjadi update profile
+    2.  pengujian pada browser:
+        - jalankan react vite: npm run dev
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend:
+            - setelah login , klik menu profile
+            - atau http://localhost:3000/profile
+        - akan tampil form update profile
