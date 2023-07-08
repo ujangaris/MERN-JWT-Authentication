@@ -691,3 +691,35 @@
         - coba lakukan update pda form profile
         - jika setup yang kita lakukan berhasil, akan ada toast success dan
           data perubahan akan tersimpan di databse
+
+## Prepare For Production
+
+    Todo :
+    1.  setup production
+        - cd : /frontend : npm run build
+    2.  backend/server.js
+        - setup production
+        - import dan pasang path
+        - buat kondisi ketika NODE_ENV berada di production
+        - mendapatkan direktori awal aplikasi
+        - middleware untuk menyajikan file2 static seperti css, javascript, gambar ,dll
+        - menangani semua permintaan yang tidak cocok, diarahkan ke file index.html
+    3.  .env
+        - NODE_ENV=production
+        - ket: ubah NODE_ENV yang tadinya development menjadi production
+    4.  pengujian pada browser:
+        - jalankan react vite: npm run server
+        - server backend dan frontend akan berjalan sekaligus
+        - untuk frontend:
+            - atau http://localhost:5000
+        - dapat dilihat pada tahap production untuk frontend kini menggunakan localhost:5000
+        - jika menggunakan localhost:3000 sudah tidak bisa
+    5.  NOTED:
+        Jika NODE_ENV bukan 'production', maka kondisi ini akan dievaluasi sebagai false.
+        Pada blok ini, kita hanya memiliki satu rute yaitu app.get('/')
+        yang akan mengirimkan respons "Server is ready...".
+        Ini digunakan dalam mode pengembangan ketika kita belum membangun aplikasi frontend
+        dan ingin memastikan server backend berjalan dengan baik.
+
+        Dengan menggunakan logika di atas, kita dapat mengatur server Express untuk menyajikan file statis
+        dan mengatur rute default tergantung pada mode lingkungan yang sedang berjalan.
